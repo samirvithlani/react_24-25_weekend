@@ -1,0 +1,18 @@
+we can create 2 type of comp:
+class based comp
+function based comp : hooks
+
+function keyword
+arrow
+
+src:
+ components
+    Home.jsx ->rafc
+    Header.jsx ->rfc
+    Footer.jsx ->rafc
+App.js    
+
+
+
+<div> createELemen ("div")
+div.className
