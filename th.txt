@@ -16,3 +16,12 @@ App.js
 
 <div> createELemen ("div")
 div.className
+
+
+comm bw parent to child component:
+there are 3 ways to pass data...
+props  : props stands for property:
+        : props is an immutable object 
+
+context
+redux

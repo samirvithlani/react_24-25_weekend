@@ -4,20 +4,30 @@ import "./App.css";
 import { Home } from "./components/Home";
 import { Footer } from "./components/Footer";
 import Header from "./components/Header";
+import { Content } from "./components/Content";
 
 function App() {
   //we can return only 1 tag at a time...
   //every tag must have a closing tag
   //whatever we write in the return statement it will display on the screen
+  var title = "REACT JS"
+  var city = "Pune"
 
+  var address = {
+    country:"India",
+    state:"Gujarat",
+    city:"Ahmedabad"
+
+  }
+  
   
   return (
     
     <div className="App">
-      
-      <Header></Header>
-      <Home></Home>
-      <Footer></Footer>
+      <Header title = {title} city={city}></Header>
+      <Content city={city} title ={title}></Content>
+      {/* <Home address = {address}></Home> */}
+      <Footer t = {title}></Footer>
     </div>
   );
 }
