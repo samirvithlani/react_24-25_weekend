@@ -27,7 +27,7 @@ function App() {
       <Header title = {title} city={city}></Header>
       <Content city={city} title ={title}></Content>
       {/* <Home address = {address}></Home> */}
-      <Footer t = {title}></Footer>
+      {/* <Footer t = {title}></Footer> */}
     </div>
   );
 }

@@ -23,5 +23,7 @@ there are 3 ways to pass data...
 props  : props stands for property:
         : props is an immutable object 
 
+props drilling...        
+
 context
 redux
