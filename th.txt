@@ -27,3 +27,9 @@ props drilling...
 
 context
 redux
+
+14/12/2024
+task: json array products: id name price, category,availableColor,
+
+1)display product name in available color .. map
+2)display product with price criteria.. filter...
