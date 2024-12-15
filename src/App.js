@@ -7,6 +7,9 @@ import Header from "./components/Header";
 import { Content } from "./components/Content";
 import { MapDemo } from "./components/MapDemo";
 import { Univ } from "./components/Univ";
+import { UseStateDemo } from "./components/UseStateDemo";
+import { UseStateDemo1 } from "./components/UseStateDemo1";
+import { UseStaeDemo2 } from "./components/UseStaeDemo2";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -27,7 +30,10 @@ function App() {
     
     <div className="App">
       <Header title = {title} city={city}></Header>
-      <Univ/>
+      {/* <UseStateDemo></UseStateDemo> */}
+      {/* <UseStateDemo1></UseStateDemo1> */}
+      <UseStaeDemo2></UseStaeDemo2>
+      {/* <Univ/> */}
       {/* <MapDemo/> */}
       {/* <Content city={city} title ={title}></Content> */}
       {/* <Home address = {address}></Home> */}

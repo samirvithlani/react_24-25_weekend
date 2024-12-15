@@ -33,3 +33,23 @@ task: json array products: id name price, category,availableColor,
 
 1)display product name in available color .. map
 2)display product with price criteria.. filter...
+
+DOM: document object mod..
+
+js --> html -->chnage document update
+
+virtual DOM: light w copy --> original 
+vdom --> DOM --> compare 
+
+Hooks: builtin | lifecyle methods
+
+16.x
+component use...
+
+all hooks: its starts with use word
+useState,useEffect
+
+cust.,..
+useAuth,useCo,,,
+
+component : state variable --> vdom --> original
