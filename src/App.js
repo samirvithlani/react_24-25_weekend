@@ -10,6 +10,8 @@ import { Univ } from "./components/Univ";
 import { UseStateDemo } from "./components/UseStateDemo";
 import { UseStateDemo1 } from "./components/UseStateDemo1";
 import { UseStaeDemo2 } from "./components/UseStaeDemo2";
+import { MapDemo2 } from "./components/MapDemo2";
+import { Country } from "./components/Country";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -30,9 +32,11 @@ function App() {
     
     <div className="App">
       <Header title = {title} city={city}></Header>
+      <Country></Country>
       {/* <UseStateDemo></UseStateDemo> */}
       {/* <UseStateDemo1></UseStateDemo1> */}
-      <UseStaeDemo2></UseStaeDemo2>
+      {/* <UseStaeDemo2></UseStaeDemo2> */}
+      {/* <MapDemo2/> */}
       {/* <Univ/> */}
       {/* <MapDemo/> */}
       {/* <Content city={city} title ={title}></Content> */}
