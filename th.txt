@@ -53,3 +53,6 @@ cust.,..
 useAuth,useCo,,,
 
 component : state variable --> vdom --> original
+<BrowserRouter> :- it will enable routing in react appliaction..
+<Routes>
+<Route>
