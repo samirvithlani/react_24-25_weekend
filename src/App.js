@@ -18,35 +18,41 @@ import { NetflixHome } from "./components/netflix/NetflixHome";
 import { NetflixMovies } from "./components/netflix/NetflixMovies";
 import { NetflixDashboard } from "./components/netflix/NetflixDashboard";
 import { Error404 } from "./components/netflix/Error404";
+import { AboutNetflix } from "./components/netflix/AboutNetflix";
+import { ContactNetflix } from "./components/netflix/ContactNetflix";
+import { NetflixPlayMovie } from "./components/netflix/NetflixPlayMovie";
 
 function App() {
   //we can return only 1 tag at a time...
   //every tag must have a closing tag
   //whatever we write in the return statement it will display on the screen
-  var title = "REACT JS"
-  var city = "Pune"
+  var title = "REACT JS";
+  var city = "Pune";
 
   var address = {
-    country:"India",
-    state:"Gujarat",
-    city:"Ahmedabad"
+    country: "India",
+    state: "Gujarat",
+    city: "Ahmedabad",
+  };
 
-  }
-  
-  
   return (
-    
     <div className="App">
       <Navbar></Navbar>
       <Routes>
-      
-        <Route path="/" element = {<NetflixDashboard/>}></Route>
-        <Route path="/netflixhome" element={<NetflixHome/>}></Route>
-        <Route path="/netflixmovies" element ={<NetflixMovies/>}></Route>
+        <Route path="/" element={<NetflixDashboard />}></Route>
+        <Route path="/dashboard" element={<NetflixDashboard />}></Route>
+        <Route path="/netflixhome" element={<NetflixHome />}></Route>
+        <Route path="/netflixmovies" element={<NetflixMovies />}></Route>
+        <Route path="/aboutnetflix" element={<AboutNetflix />}></Route>
+        <Route
+          path="/dashboard/contactnetflix"
+          element={<ContactNetflix />}
+        ></Route>
+        <Route path="/netflixmovies/play/:id" element={<NetflixPlayMovie/>}></Route>
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
-        <Route path="/*" element={<Error404/>}></Route>
+        <Route path="/*" element={<Error404 />}></Route>
       </Routes>
-      
+
       {/* <Header title = {title} city={city}></Header>
       <Country></Country> */}
       {/* <UseStateDemo></UseStateDemo> */}
