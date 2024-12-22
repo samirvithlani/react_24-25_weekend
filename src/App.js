@@ -48,7 +48,10 @@ function App() {
           path="/dashboard/contactnetflix"
           element={<ContactNetflix />}
         ></Route>
-        <Route path="/netflixmovies/play/:id" element={<NetflixPlayMovie/>}></Route>
+        <Route
+          path="/netflixmovies/play/:id"
+          element={<NetflixPlayMovie />}
+        ></Route>
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>
       </Routes>

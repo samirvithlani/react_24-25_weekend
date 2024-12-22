@@ -56,3 +56,18 @@ component : state variable --> vdom --> original
 <BrowserRouter> :- it will enable routing in react appliaction..
 <Routes>
 <Route>
+
+
+create componanets AboutNetflix
+create componanets ContactNetflix
+
+        register in Routes inside app.js
+        call it from Dashboard using Link component..
+
+create component playmovie
+        register url in app.js with wildard char :id
+indide movie component create 3 4 movies with Link
+        on click of Link above compinent should open
+        inside movie component get wildcard char data using useParams()
+
+
