@@ -71,3 +71,45 @@ indide movie component create 3 4 movies with Link
         inside movie component get wildcard char data using useParams()
 
 
+
+form handling:        
+react-hook-form
+formik
+
+
+
+useForm () ==>
+
+
+handleSubmit = (cb)=>{
+
+         //data fname lsna,.... handle...
+         const name = document.qselect("name").value
+         
+         var formData = {
+                key:value..
+                name:" asjkhsalas"
+         }       
+
+         cb(formData)
+
+
+}
+
+
+1st step : npm install react-hook-form
+
+create folder named forms inside component      
+        create file FormDemo1.jsx ---> code
+        app.js --> <Routes><Route>register...
+        navbar create new link --> provide url registerd in routes
+
+
+
+
+
+
+
+
+
+
