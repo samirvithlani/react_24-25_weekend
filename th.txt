@@ -105,6 +105,15 @@ create folder named forms inside component
         navbar create new link --> provide url registerd in routes
 
 
+05/01/2025
+TASK:
+1)Create form for student appliaction : min 7 fields should inclucde radion button and checkbox
+2)create form mcq paper handler : 
+
+        enter question name : enter opttion correct answer:
+        submit: display question
+        hint:take array as useState and push data.
+
 
 
 
