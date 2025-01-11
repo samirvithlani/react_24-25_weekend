@@ -115,6 +115,19 @@ TASK:
         hint:take array as useState and push data.
 
 
+{
+        required:{
+        value:true,message:"Name is Required*"
+        }
+}
+
+{
+        required:{
+            value:true,
+            message:"email ir required"
+        }
+    }
+
 
 
 
