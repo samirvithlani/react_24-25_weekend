@@ -130,8 +130,14 @@ TASK:
 
 
 task 1:
-4 hobbies user has to select min 3
 
+regex revsion:
+4 hobbies user has to select min 3
+depdent dropdown
+
+onchange -->regex :
+
+passpwrd handler....
 
 
 
