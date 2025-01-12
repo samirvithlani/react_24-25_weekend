@@ -129,6 +129,9 @@ TASK:
     }
 
 
+task 1:
+4 hobbies user has to select min 3
+
 
 
 

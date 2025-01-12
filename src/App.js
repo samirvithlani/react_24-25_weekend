@@ -24,6 +24,7 @@ import { NetflixPlayMovie } from "./components/netflix/NetflixPlayMovie";
 import { FormDemo1 } from "./components/forms/FormDemo1";
 import { McqGeneration } from "./components/forms/McqGeneration";
 import { FormDemo2 } from "./components/forms/FormDemo2";
+import { FormDemo3 } from "./components/forms/FormDemo3";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -55,7 +56,7 @@ function App() {
           path="/netflixmovies/play/:id"
           element={<NetflixPlayMovie />}
         ></Route>
-        <Route path = "/formdemo1" element = {<FormDemo2/>}></Route>
+        <Route path = "/formdemo1" element = {<FormDemo3/>}></Route>
         <Route path ="/genmcq" element ={<McqGeneration/>}></Route>
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>
