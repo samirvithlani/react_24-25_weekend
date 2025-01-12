@@ -6,7 +6,7 @@ export const FormDemo3 = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({mode:"all"});
+  } = useForm({mode:"all",});
 
   const submitHandler = (data) => {
     console.log(data);
