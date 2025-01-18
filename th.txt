@@ -140,6 +140,53 @@ onchange -->regex :
 passpwrd handler....
 
 
+API calling:
+API : appliaction prog interface
+
+producers    consumers
+
+
+Andoroid : Spring | node | django
+
+java,kotlin : <--- comm ---> URL   : django
+type: rest soap:xml, JSON 
+
+API:       backend         frontend
+          
+GET       Fetch              fetch -display
+POST      Create            send
+PUT       update                update          
+DELETE
+
+fetch
+AXIOS NPM:
+
+
+
+PROMISE"
+
+
+API TASK
+https://www.omdbapi.com/
+
+9d57be0b
+
+
+component getmovie datra ====>
+
+enter movie name: [] avaart --> res.data ->seatrch --->
+
+browser display card 
+
+[click] [] []
+[] [] []
+
+
+click -->id =->new component ---> usePArams --> id
+
+i -->
+https://www.imdb.com/title/tt0499549/
+
 
 
 
