@@ -28,6 +28,7 @@ import { FormDemo3 } from "./components/forms/FormDemo3";
 import { InputDemo } from "./components/forms/InputDemo";
 import { ApiDemo1 } from "./components/apis/ApiDemo1";
 import { Omdb1 } from "./components/apis/Omdb1";
+import { ApiDemo2 } from "./components/apis/ApiDemo2";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -61,7 +62,8 @@ function App() {
         ></Route>
         <Route path = "/formdemo1" element = {<InputDemo/>}></Route>
         <Route path ="/genmcq" element ={<McqGeneration/>}></Route>
-        <Route path="/apidemo1" element = {<Omdb1/>}></Route>
+        <Route path="/apidemo1" element = {<ApiDemo1/>}></Route>
+        <Route path="/apidemo2" element = {<ApiDemo2/>}></Route>
         <Route path="/moveidetail/:id" element ={<h1>moviedetail compin</h1>}></Route>
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>
