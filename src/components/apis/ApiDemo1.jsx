@@ -1,10 +1,14 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { use } from 'react'
+import { Button, Modal } from 'react-bootstrap'
 
 export const ApiDemo1 = () => {
 
     const [users, setusers] = useState([])
+    const [show, setshow] = useState(false)
+    const [user, setuser] = useState({})
+
     const getAllUsers = async()=>{
         //await //await pending...
         //Promise<AxiosResponse<any, any>>
@@ -15,6 +19,24 @@ export const ApiDemo1 = () => {
         setusers(res.data.data)
     }
 
+    const detailUser =async(id) =>{
+        const res = await axios.get("https://node5.onrender.com/user/user/"+id)
+        setuser(res.data.data)
+        setshow(true)
+        //api...
+    }
+    const handleClose = ()=>{
+        setshow(false)
+    }
+    const deleteUser=async(id)=>{
+        //delete api..
+        const res = await axios.delete("https://node5.onrender.com/user/user/"+id)
+        // console.log(res)
+        if(res.status===204){
+            //alert("record deleted..")
+        }
+    getAllUsers() //to get updated record..
+    }
   return (
     <div>
         <h1>API DEMO 1</h1>
@@ -31,6 +53,7 @@ export const ApiDemo1 = () => {
                     <th>NAME</th>
                     <th>AGe</th>
                     <th>EMAIL</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,11 +64,34 @@ export const ApiDemo1 = () => {
                             <td>{user.name}</td>
                             <td>{user.age}</td>
                             <td>{user.email}</td>
+                            <td>
+                                <button onClick={()=>{detailUser(user._id)}} className='btn btn-info'>DETAIL</button>
+                                <Button variant='danger' onClick={()=>{deleteUser(user._id)}}>DELETE</Button>
+                                {/* <Button variant='info'>DEtail</Button> */}
+                            </td>
                         </tr>
                     })
                 }
             </tbody>
         </table>
+        <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>User Detail</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <h1>USer Name ={user.name}</h1>
+            <p>Email = {user.email}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+
+        </Modal>
     </div>
   )
 }
