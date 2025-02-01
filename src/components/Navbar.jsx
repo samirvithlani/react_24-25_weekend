@@ -26,26 +26,43 @@ export const Navbar = () => {
               {/* <a class="nav-link" href="/netflixhome">
                 Home 
               </a> */}
-              <Link to="/netflixhome" className="nav-link" >Home</Link>
+              <Link to="/netflixhome" className="nav-link">
+                Home
+              </Link>
             </li>
             <li class="nav-item">
-              <Link to="/netflixmovies" className="nav-link">Movies</Link>
+              <Link to="/netflixmovies" className="nav-link">
+                Movies
+              </Link>
             </li>
             <li class="nav-item">
-              <Link to="/formdemo1" className="nav-link">FORM DEMO 1</Link>
+              <Link to="/formdemo1" className="nav-link">
+                FORM DEMO 1
+              </Link>
             </li>
             <li class="nav-item">
-              <Link to="/genmcq" className="nav-link">genmcq</Link>
+              <Link to="/genmcq" className="nav-link">
+                genmcq
+              </Link>
             </li>
-            
+
             <li class="nav-item">
-              <Link to="/apidemo1" className="nav-link">API DEMO 1</Link>
+              <Link to="/apidemo1" className="nav-link">
+                API DEMO 1
+              </Link>
             </li>
             <li class="nav-item">
-              <Link to="/apidemo2" className="nav-link">API DEMO 2</Link>
+              <Link to="/apidemo2" className="nav-link">
+                API DEMO 2
+              </Link>
             </li>
-        
-            
+
+            <li class="nav-item">
+              <Link to="/useeffectdemo" className="nav-link">
+                {" "}
+                useeffectdemo
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
