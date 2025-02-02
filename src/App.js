@@ -31,6 +31,7 @@ import { Omdb1 } from "./components/apis/Omdb1";
 import { ApiDemo2 } from "./components/apis/ApiDemo2";
 import { UseEffectDemo } from "./components/UseEffectDemo";
 import { UseMemoDemo } from "./components/UseMemoDemo";
+import { EditUser } from "./components/apis/EditUser";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -69,6 +70,7 @@ function App() {
         <Route path="/moveidetail/:id" element ={<h1>moviedetail compin</h1>}></Route>
         <Route path="/useeffectdemo" element ={<UseEffectDemo/>}></Route>
         <Route path="/useMemoDemo" element = {<UseMemoDemo/>}></Route>
+        <Route path="/edituser/:id" element = {<EditUser/>}></Route>
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>
       </Routes>

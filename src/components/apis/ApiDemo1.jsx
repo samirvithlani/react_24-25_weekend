@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { use } from "react";
 import { Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
@@ -86,6 +87,7 @@ export const ApiDemo1 = () => {
                   >
                     DELETE
                   </Button>
+                  <Link to={`/edituser/${user._id}`} className="btn btn-warning">UPDATE</Link>
                   {/* <Button variant='info'>DEtail</Button> */}
                 </td>
               </tr>
