@@ -71,6 +71,12 @@ export const Navbar = () => {
                 useMemoDemo
               </Link>
             </li>
+            <li class="nav-item">
+              <Link to="/products" className="nav-link">
+                {" "}
+                products
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
