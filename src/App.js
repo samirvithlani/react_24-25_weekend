@@ -33,6 +33,7 @@ import { UseEffectDemo } from "./components/UseEffectDemo";
 import { UseMemoDemo } from "./components/UseMemoDemo";
 import { EditUser } from "./components/apis/EditUser";
 import { Products } from "./components/context/Products";
+import { FindBombGame } from "./components/FindBombGame";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -73,6 +74,8 @@ function App() {
         <Route path="/useMemoDemo" element = {<UseMemoDemo/>}></Route>
         <Route path="/edituser/:id" element = {<EditUser/>}></Route>
         <Route path="/products" element ={<Products/>}></Route>
+        <Route path="/findbomb" element ={<FindBombGame/>}></Route>
+        
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>
       </Routes>

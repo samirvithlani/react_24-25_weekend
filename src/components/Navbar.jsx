@@ -77,6 +77,12 @@ export const Navbar = () => {
                 products
               </Link>
             </li>
+            <li class="nav-item">
+              <Link to="/findbomb" className="nav-link">
+                {" "}
+                findbomb
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
