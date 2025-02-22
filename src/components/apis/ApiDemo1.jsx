@@ -3,11 +3,14 @@ import React, { useEffect, useState } from "react";
 import { use } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuthentication from "../../hooks/useAuthorization";
 
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
   const [show, setshow] = useState(false);
   const [user, setuser] = useState({});
+
+  const {isAdmin} =useAuthentication()
 
   const getAllUsers = async () => {
     //await //await pending...
@@ -55,7 +58,10 @@ export const ApiDemo1 = () => {
       <table className="table table-dark">
         <thead>
           <tr>
-            <th>ID</th>
+            {
+              isAdmin && <th>ID</th>
+            }
+            
             <th>NAME</th>
             <th>AGe</th>
             <th>EMAIL</th>
@@ -66,7 +72,10 @@ export const ApiDemo1 = () => {
           {users?.map((user) => {
             return (
               <tr>
-                <td>{user._id}</td>
+                {
+                  isAdmin &&   <td>{user._id}</td>
+                }
+                
                 <td>{user.name}</td>
                 <td>{user.age}</td>
                 <td>{user.email}</td>
@@ -79,7 +88,9 @@ export const ApiDemo1 = () => {
                   >
                     DETAIL
                   </button>
-                  <Button
+                  {
+                    isAdmin &&
+                    <Button
                     variant="danger"
                     onClick={() => {
                       deleteUser(user._id);
@@ -87,6 +98,8 @@ export const ApiDemo1 = () => {
                   >
                     DELETE
                   </Button>
+                  }
+                  
                   <Link to={`/edituser/${user._id}`} className="btn btn-warning">UPDATE</Link>
                   {/* <Button variant='info'>DEtail</Button> */}
                 </td>

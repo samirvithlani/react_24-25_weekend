@@ -26,7 +26,10 @@ props  : props stands for property:
 props drilling...        
 
 context
+
+
 redux
+:state managment tool:
 
 14/12/2024
 task: json array products: id name price, category,availableColor,
@@ -189,5 +192,21 @@ https://www.imdb.com/title/tt0499549/
 
 
 
+reducer:
+distpacther
+store:
+
+redux tradi:
+
+redux took kit
 
 
+
+
+index.js --> store --> [reducers.....]
+
+reducers
+action
+
+product -->addtocart [action] -->dispatch --> redcuer [store]
+product -->addtocart [action] [productData] --> redcuer [store][productData]

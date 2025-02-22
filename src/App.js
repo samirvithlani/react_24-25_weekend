@@ -34,6 +34,8 @@ import { UseMemoDemo } from "./components/UseMemoDemo";
 import { EditUser } from "./components/apis/EditUser";
 import { Products } from "./components/context/Products";
 import { FindBombGame } from "./components/FindBombGame";
+import { Login } from "./components/Login";
+import { ProductComponent } from "./components/ProductComponent";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -75,6 +77,8 @@ function App() {
         <Route path="/edituser/:id" element = {<EditUser/>}></Route>
         <Route path="/products" element ={<Products/>}></Route>
         <Route path="/findbomb" element ={<FindBombGame/>}></Route>
+        <Route path="/login" element ={<Login/>}></Route>
+        <Route path="/productcomponent" element = {<ProductComponent/>}></Route>
         
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>

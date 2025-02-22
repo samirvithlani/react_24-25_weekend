@@ -5,7 +5,7 @@ export const FindBombGame = () => {
   const [gameOver, setgameOver] = useState(false);
   const [message, setmessage] = useState("Find The Bomb");
 
-  const gridSize = 3;
+  const gridSize = 5;
   const totalTitles = gridSize * gridSize;
 
   //bomb position...

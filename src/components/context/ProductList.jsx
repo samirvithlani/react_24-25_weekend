@@ -38,7 +38,7 @@ export const ProductList = () => {
         </tbody>
       </table>
 
-      <SubProductList />
+    <SubProductList />
     </div>
   );
 };
