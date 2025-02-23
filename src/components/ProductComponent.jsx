@@ -18,7 +18,7 @@ export const ProductComponent = () => {
       <div className="card">
         <h1>Iphone 15</h1>
         <p>price = 200</p>
-        <button onClick={() => {}} className="btn btn-info">
+        <button onClick={() => {dispatch(addToCart({id:102,name:"iphone15",price:200}))}} className="btn btn-info">
           ADD TO CART
         </button>
       </div>

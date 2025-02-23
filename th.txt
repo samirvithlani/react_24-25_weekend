@@ -210,3 +210,14 @@ action
 
 product -->addtocart [action] -->dispatch --> redcuer [store]
 product -->addtocart [action] [productData] --> redcuer [store][productData]
+
+
+slice : reducer = {actions...}
+
+index.js --> store ->redcuers-->actions
+
+state: intialState : cartArray :[]
+action: type: "cart/actionName" "cart/addToCart"
+payload: object
+
+action -->object -->dispatch ->payload value

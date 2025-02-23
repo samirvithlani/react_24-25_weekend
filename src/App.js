@@ -36,6 +36,7 @@ import { Products } from "./components/context/Products";
 import { FindBombGame } from "./components/FindBombGame";
 import { Login } from "./components/Login";
 import { ProductComponent } from "./components/ProductComponent";
+import { BankComponent } from "./components/BankComponent";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -79,6 +80,7 @@ function App() {
         <Route path="/findbomb" element ={<FindBombGame/>}></Route>
         <Route path="/login" element ={<Login/>}></Route>
         <Route path="/productcomponent" element = {<ProductComponent/>}></Route>
+        <Route path="/bankapp" element ={<BankComponent/>}></Route>
         
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>
