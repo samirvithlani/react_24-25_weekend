@@ -221,3 +221,6 @@ action: type: "cart/actionName" "cart/addToCart"
 payload: object
 
 action -->object -->dispatch ->payload value
+
+:componeny --> data....[3 students recird....]
+cimpinent ---> filter -->

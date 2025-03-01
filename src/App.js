@@ -37,6 +37,10 @@ import { FindBombGame } from "./components/FindBombGame";
 import { Login } from "./components/Login";
 import { ProductComponent } from "./components/ProductComponent";
 import { BankComponent } from "./components/BankComponent";
+import { useSelector } from "react-redux";
+import "./assets/css/theme.css";
+import { StudentTable } from "./components/StudentTable";
+import { StudentTable2 } from "./components/StudentTable2";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -50,9 +54,13 @@ function App() {
     state: "Gujarat",
     city: "Ahmedabad",
   };
+  const themeState = useSelector((state) => state.theme.theme);
+  console.log("themeState", themeState);
 
   return (
-    <div className="App">
+    // <div className="App" style={{backgroundColor:themeState === "light" ? "white" :"black",color:themeState === "light" ? "black" :"white"}}>
+    // <div className= {themeState === "light" ? "light" : "dark"}>
+    <div className={`App ${themeState === "light" ? "light" : "dark"}`}>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<NetflixDashboard />}></Route>
@@ -68,20 +76,25 @@ function App() {
           path="/netflixmovies/play/:id"
           element={<NetflixPlayMovie />}
         ></Route>
-        <Route path = "/formdemo1" element = {<InputDemo/>}></Route>
-        <Route path ="/genmcq" element ={<McqGeneration/>}></Route>
-        <Route path="/apidemo1" element = {<ApiDemo1/>}></Route>
-        <Route path="/apidemo2" element = {<ApiDemo2/>}></Route>
-        <Route path="/moveidetail/:id" element ={<h1>moviedetail compin</h1>}></Route>
-        <Route path="/useeffectdemo" element ={<UseEffectDemo/>}></Route>
-        <Route path="/useMemoDemo" element = {<UseMemoDemo/>}></Route>
-        <Route path="/edituser/:id" element = {<EditUser/>}></Route>
-        <Route path="/products" element ={<Products/>}></Route>
-        <Route path="/findbomb" element ={<FindBombGame/>}></Route>
-        <Route path="/login" element ={<Login/>}></Route>
-        <Route path="/productcomponent" element = {<ProductComponent/>}></Route>
-        <Route path="/bankapp" element ={<BankComponent/>}></Route>
-        
+        <Route path="/formdemo1" element={<InputDemo />}></Route>
+        <Route path="/genmcq" element={<McqGeneration />}></Route>
+        <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+        <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+        <Route
+          path="/moveidetail/:id"
+          element={<h1>moviedetail compin</h1>}
+        ></Route>
+        <Route path="/useeffectdemo" element={<UseEffectDemo />}></Route>
+        <Route path="/useMemoDemo" element={<UseMemoDemo />}></Route>
+        <Route path="/edituser/:id" element={<EditUser />}></Route>
+        <Route path="/products" element={<Products />}></Route>
+        <Route path="/findbomb" element={<FindBombGame />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/productcomponent" element={<ProductComponent />}></Route>
+        <Route path="/bankapp" element={<BankComponent />}></Route>
+        <Route path = "/sturecords" element = {<StudentTable/>}></Route>
+        <Route path = "/sturecords2" element = {<StudentTable2/>}></Route>
+
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>
       </Routes>

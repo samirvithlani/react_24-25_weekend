@@ -1,6 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { changeTheme } from "../redux/ThemeSlice";
 
 export const Navbar = () => {
   //const state = useSelector((state)=>state)
@@ -10,6 +11,7 @@ export const Navbar = () => {
   console.log(cartState)
   const bankState = useSelector((state)=>state.bank)
 
+  const dispatch = useDispatch()
 
   return (
     <div>
@@ -107,11 +109,27 @@ export const Navbar = () => {
                 BANK APP
               </Link>
             </li>
+            
+            <li class="nav-item">
+              <Link to="/sturecords" className="nav-link">
+              sturecords
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link to="/sturecords2" className="nav-link">
+              sturecords2
+              </Link>
+            </li>
             <li className="nav-item">
               <h1>{cartState.cart?.length}</h1>
             </li>
             <li className="nav-item">
               <h1>{bankState.balance}</h1>
+            </li>
+            <li className="nav-item">
+              <button onClick={()=>{
+                dispatch(changeTheme())
+              }}>CHANGE THEME</button>
             </li>
           </ul>
         </div>
