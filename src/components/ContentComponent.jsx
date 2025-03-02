@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchUsers } from '../redux/ContentSlice'
+import { fetchUsers,addUser } from '../redux/ContentSlice'
 
 export const ContentComponent = () => {
     const dispatch = useDispatch()
@@ -11,6 +11,10 @@ export const ContentComponent = () => {
     useEffect(() => {
       dispatch(fetchUsers())
     }, [])
+
+    const addUser1 = ()=>{
+        dispatch(addUser({name:"ram",age:25,email:"ram@gmail.com",isActive:true}))
+    }
     
     
   return (
@@ -19,7 +23,7 @@ export const ContentComponent = () => {
         {
             contentState.isLoading && <h1>LOADING.....</h1> 
         }
-        
+        <button onClick={addUser1}>ADD USER</button>
     </div>
   )
 }

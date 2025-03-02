@@ -7,6 +7,17 @@ const initialState ={
     error: null,
 }
 
+export const addUser = createAsyncThunk(
+    "content/fetchUsers",
+    //async...
+    async (userData) => {
+        console.log("userData",userData)
+        const res = await axios.post("https://node5.onrender.com/user/user",userData)
+        const data = res.data
+        return data
+    }
+)
+
 export const fetchUsers = createAsyncThunk(
     "content/fetchUsers",
     //async...
