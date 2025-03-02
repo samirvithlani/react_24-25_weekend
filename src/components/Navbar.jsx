@@ -87,7 +87,14 @@ export const Navbar = () => {
                 products
               </Link>
             </li>
+            
             <li class="nav-item">
+              <Link to="/content" className="nav-link">
+                {" "}
+                content
+              </Link>
+            </li>
+            {/* <li class="nav-item">
               <Link to="/findbomb" className="nav-link">
                 {" "}
                 findbomb
@@ -119,7 +126,7 @@ export const Navbar = () => {
               <Link to="/sturecords2" className="nav-link">
               sturecords2
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <h1>{cartState.cart?.length}</h1>
             </li>

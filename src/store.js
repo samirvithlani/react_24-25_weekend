@@ -3,6 +3,7 @@ import cartSlice from "./redux/CartSlice"
 import bankSlice from "./redux/BankSlice"
 import themeSlice from "./redux/ThemeSlice"
 import  studentSlice from "./redux/StudentRecordSlice"
+import contentSlice  from "./redux/ContentSlice"
 
 
 export const store = configureStore({
@@ -10,6 +11,7 @@ export const store = configureStore({
         cart:cartSlice,
         bank:bankSlice,
         theme:themeSlice,
-        student:studentSlice
+        student:studentSlice,
+        content:contentSlice
     }
 })
