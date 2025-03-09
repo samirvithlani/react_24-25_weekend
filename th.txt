@@ -224,3 +224,23 @@ action -->object -->dispatch ->payload value
 
 :componeny --> data....[3 students recird....]
 cimpinent ---> filter -->
+
+
+rating bar:
+5 starts
+
+5 start : exellent
+4 start : good
+3 start : average
+2 start : below average
+1 start : poor
+
+
+useStae --> products array ==> id,name price,
+normal slider:
+0 --->10000
+price slider : 0 -100
+table:
+
+
+mui switch redux theme

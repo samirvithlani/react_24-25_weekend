@@ -42,6 +42,7 @@ import "./assets/css/theme.css";
 import { StudentTable } from "./components/StudentTable";
 import { StudentTable2 } from "./components/StudentTable2";
 import { ContentComponent } from "./components/ContentComponent";
+import { MuiButton } from "./mui/MuiButton";
 
 function App() {
   //we can return only 1 tag at a time...
@@ -96,6 +97,7 @@ function App() {
         <Route path = "/sturecords" element = {<StudentTable/>}></Route>
         <Route path = "/sturecords2" element = {<StudentTable2/>}></Route>
         <Route path="/content" element = {<ContentComponent/>}></Route>
+        <Route path="/muibutton" element ={<MuiButton/>}></Route>
 
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>

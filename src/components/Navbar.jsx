@@ -1,17 +1,25 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { changeTheme } from "../redux/ThemeSlice";
+import { changeTheme, resetTheme } from "../redux/ThemeSlice";
+import { PURGE } from "redux-persist";
 
 export const Navbar = () => {
   //const state = useSelector((state)=>state)
   //console.log("navbar state...",state)
+
+  
+  
 
   const cartState = useSelector((state)=>state.cart)
   console.log(cartState)
   const bankState = useSelector((state)=>state.bank)
 
   const dispatch = useDispatch()
+  const logoutHandler = ()=>{
+    dispatch(resetTheme())
+    dispatch({type:PURGE, key:"root", result:()=>null})
+  }
 
   return (
     <div>
@@ -94,6 +102,8 @@ export const Navbar = () => {
                 content
               </Link>
             </li>
+            
+            
             {/* <li class="nav-item">
               <Link to="/findbomb" className="nav-link">
                 {" "}
@@ -138,7 +148,22 @@ export const Navbar = () => {
                 dispatch(changeTheme())
               }}>CHANGE THEME</button>
             </li>
+            <li class="nav-item">
+              <Link to="/bankapp" className="nav-link">
+                BANK APP
+              </Link>
+            </li>
+
+            <li class="nav-item">
+              <Link to="/muibutton" className="nav-link">
+              muibutton
+              </Link>
+            </li>
+            
           </ul>
+          <li class="nav-item">
+              <button onClick={()=>{logoutHandler()}}>logout</button>
+            </li>
         </div>
       </nav>
     </div>
