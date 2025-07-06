@@ -43,8 +43,24 @@ import { StudentTable } from "./components/StudentTable";
 import { StudentTable2 } from "./components/StudentTable2";
 import { ContentComponent } from "./components/ContentComponent";
 import { MuiButton } from "./mui/MuiButton";
+import { FileUpload } from "./components/FileUpload";
+import { io } from "socket.io-client"; 
+import { useEffect } from "react";
+
 
 function App() {
+  const socket = io("http://localhost:3002")
+
+  const sendMessageHandler= ()=>{
+
+    socket.emit("sendMessage","hi this is from react..")
+
+  }
+  useEffect(()=>{
+    socket.on("receiveMessage",(data)=>{
+      console.log("message received...",data)
+    })
+  },[])
   //we can return only 1 tag at a time...
   //every tag must have a closing tag
   //whatever we write in the return statement it will display on the screen
@@ -98,6 +114,7 @@ function App() {
         <Route path = "/sturecords2" element = {<StudentTable2/>}></Route>
         <Route path="/content" element = {<ContentComponent/>}></Route>
         <Route path="/muibutton" element ={<MuiButton/>}></Route>
+        <Route path="/fileupload"element = {<FileUpload/>}></Route>
 
         {/* <Route path="/*" element ={<h1>Error....</h1>}></Route>   */}
         <Route path="/*" element={<Error404 />}></Route>
@@ -114,6 +131,7 @@ function App() {
       {/* <Content city={city} title ={title}></Content> */}
       {/* <Home address = {address}></Home> */}
       {/* <Footer t = {title}></Footer> */}
+      <button onClick={()=>{sendMessageHandler()}}>SEND</button>
     </div>
   );
 }

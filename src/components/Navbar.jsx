@@ -137,7 +137,7 @@ export const Navbar = () => {
               sturecords2
               </Link>
             </li> */}
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <h1>{cartState.cart?.length}</h1>
             </li>
             <li className="nav-item">
@@ -157,6 +157,12 @@ export const Navbar = () => {
             <li class="nav-item">
               <Link to="/muibutton" className="nav-link">
               muibutton
+              </Link>
+            </li> */}
+            
+            <li class="nav-item">
+              <Link to="/fileupload" className="nav-link">
+              fileupload
               </Link>
             </li>
             
